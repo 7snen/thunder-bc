@@ -1,6 +1,6 @@
 ﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = "-"
+const prefix = "$"
 
 console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=')
 console.log('         [Wait please .. ]       ')
@@ -36,7 +36,7 @@ client.on('message', message => {
     let command = messageArray[0];
     
     
-    if (command === `${prefix}help-br`) {
+    if (command === `${prefix}help`) {
 			let embed = new Discord.RichEmbed()
                 .setColor('RANDOM')
                 .addField('     **=-=-:: [ Bc Bot ] ::-=-=** ' ,'╔[❖═════════════════════❖]╗')
@@ -45,7 +45,7 @@ client.on('message', message => {
 				.addField(`**${prefix}bcf | رسالة جماعية للوفلاين فقط**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
 				.addField(`**${prefix}bcrole | رسالة جماعية لرتبة معينه**` ,'**=-=-=-=-=-=-=-=-=-=-=**')
                 .addField('=-=- [ شكرا على استعمال البوت ] -=-= ' ,'╚[❖═════════════════════❖]╝')
-                .setFooter(`By ixVolBiNa`)
+                .setFooter(`By SilEnT`)
                 .setTimestamp()
 			
                 message.author.sendEmbed(embed)
@@ -137,7 +137,7 @@ client.on('message' , message => {//bcrole
     }
 });
 
-const developers = ["587783907563536404","id"]
+const developers = ["535081316589502464","id"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
